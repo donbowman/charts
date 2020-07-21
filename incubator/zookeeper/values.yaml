@@ -261,6 +261,8 @@ env:
   ## election.
   ZOO_INIT_LIMIT: 5
 
+  ## The number of wall clock ms that corresponds to a Tick for the ensembles
+  ## internal time.
   ZOO_TICK_TIME: 2000
 
   ## The maximum number of concurrent client connections that
@@ -268,15 +270,12 @@ env:
   ZOO_MAX_CLIENT_CNXNS: 60
 
   ## The number of Tick by which a follower may lag behind the ensembles leader.
-  ZK_SYNC_LIMIT: 10
-
-  ## The number of wall clock ms that corresponds to a Tick for the ensembles
-  ## internal time.
-  ZK_TICK_TIME: 2000
+  ZOO_SYNC_LIMIT: 10
 
   ZOO_AUTOPURGE_PURGEINTERVAL: 0
   ZOO_AUTOPURGE_SNAPRETAINCOUNT: 3
   ZOO_STANDALONE_ENABLED: false
+  ZOO_ADMINSERVER_ENABLED: true
 
 jobs:
   ## ref: http://zookeeper.apache.org/doc/r3.4.10/zookeeperProgrammers.html#ch_zkSessions
